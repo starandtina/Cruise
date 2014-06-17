@@ -1,45 +1,36 @@
 .ui-tab {
-  overflow: hidden;
-  padding-left: 10px;
-  border-bottom: 1px solid #DDD;
-}
-
-.ui-tab .tab-list {
   position: relative;
-  bottom: -1px;
-  margin: 0;
-  padding: 0;
-  height: 35px;
-  border-left: 1px solid #DDD;
-  list-style: none;
 }
 
-.ui-tab .tab-unit {
-  float: left;
+.ui-tab ul{
+  border-bottom: 2px solid #000;
 }
 
-.ui-tab .tab-unit .tab {
-  display: block;
-  padding: 4px 10px;
-  border: 1px solid #DDD;
-  border-left: none;
-  background-color: #F7F7F7;
-  color: #333;
-  font-size: 14px;
-  line-height: 26px;
+.ui-tab li {
+  float: right;
+  margin-left: 10px;
+  padding: 0 10px;
+  height: 30px;
+  border: 2px solid #000;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  line-height: 30px;
 }
 
-.ui-tab .tab-unit .tab:hover {
-  background-color: #EEE;
+.ui-tab li .tab {
+  display: inline-block;
+  color: #000;
 }
 
-.ui-tab .tab-unit .tab-on {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #3F6B97 #DDD #FFF;
-  border-top-width: 2px;
-  border-left: none;
-  background-color: #FFF;
-  text-decoration: none;
-  line-height: 25px;
+.ui-tab li.selected {
+  position: relative;
+  bottom: -2px;
+  margin-top: -8px;
+  height: 38px;
+  background-color: RGB(77,77,77);
+  line-height: 38px;
+}
+
+.ui-tab li.selected .tab {
+  color: #FFF;
 }

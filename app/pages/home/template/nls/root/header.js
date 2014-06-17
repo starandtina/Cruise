@@ -1,5 +1,5 @@
 define({
-  Logo: 'LOGO',
+  Logo: 'Cruise',
   Home: 'Home',
   Dashboard: 'Dashboard',
   VMS: 'VMS',

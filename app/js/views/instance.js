@@ -12,8 +12,8 @@ define([
   'use strict';
 
   var InstanceView = Backbone.View.extend({
-    attributes: {
-      class: 'row'
+    className: function () {
+      return 'agent-item ' + this.model.get('status');
     },
     initialize: function () {
       this.listenTo(this.model, 'change', this.render);
@@ -22,8 +22,6 @@ define([
     render: function (options) {
       var data = this.model.toJSON();
 
-      data.createTime = Util.moment(data.createTime).format('LLLL');
-      options = options || {};
       this.$el.html(InstanceTpl(_.extend(data, options)));
 
       return this;

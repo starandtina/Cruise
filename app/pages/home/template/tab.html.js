@@ -5,8 +5,8 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 ;var locals_for_with = (locals || {});(function (currentTabId, _t) {
-var tabItems = [{id: '1', url: '/dashboard', label: 'Dashboard', 'icon': 'dashboard'}, {url: '/vms', label: 'VMS', id: '2', 'icon': 'bookmark'}, {url: '/gws', label: 'Gateways', id: '3', 'icon': 'bookmark'}, {url: '/services/create', label: 'Services', id: '4', 'icon': 'bookmark'}]
-buf.push("<div class=\"ui-tab\"><ul class=\"tab-list\">");
+var tabItems = [{id: '1', url: '/dashboard', label: 'Dashboard', 'icon': 'dashboard'}, {url: '/cruise', label: 'Cruise', id: '2', 'icon': 'bookmark'}, {url: '/agents', label: 'Agents', id: '3', 'icon': 'bookmark'}, {url: '/help', label: 'Help', id: '4', 'icon': 'bookmark'}].reverse()
+buf.push("<div class=\"ui-tab\"><ul class=\"tab-list clearfix\">");
 // iterate tabItems
 ;(function(){
   var $$obj = tabItems;
@@ -17,11 +17,11 @@ buf.push("<div class=\"ui-tab\"><ul class=\"tab-list\">");
 
 if ( currentTabId == tab.id)
 {
-buf.push("<li class=\"tab-unit\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab-on tab internal-home\"><i" + (jade.cls(["fa fa-" + (tab.icon) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</i></a></li>");
+buf.push("<li class=\"selected\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</a></li>");
 }
 else
 {
-buf.push("<li class=\"tab-unit\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\"><i" + (jade.cls(["fa fa-" + (tab.icon) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</i></a></li>");
+buf.push("<li><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</a></li>");
 }
     }
 
@@ -32,11 +32,11 @@ buf.push("<li class=\"tab-unit\"><a" + (jade.attr("href", "" + (tab.url) + "", t
 
 if ( currentTabId == tab.id)
 {
-buf.push("<li class=\"tab-unit\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab-on tab internal-home\"><i" + (jade.cls(["fa fa-" + (tab.icon) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</i></a></li>");
+buf.push("<li class=\"selected\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</a></li>");
 }
 else
 {
-buf.push("<li class=\"tab-unit\"><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\"><i" + (jade.cls(["fa fa-" + (tab.icon) + ""], [true])) + ">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</i></a></li>");
+buf.push("<li><a" + (jade.attr("href", "" + (tab.url) + "", true, false)) + " class=\"tab internal-home\">" + (jade.escape(null == (jade_interp = _t[tab.label]) ? "" : jade_interp)) + "</a></li>");
 }
     }
 

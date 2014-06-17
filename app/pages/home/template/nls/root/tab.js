@@ -1,6 +1,6 @@
 define({
-  Dashboard: 'Dashboard',
-  VMS: 'VMS',
-  Gateways: 'Gateways',
-  Services: 'Services'
+  Dashboard: 'DASHBOARD',
+  Cruise: 'MY CURISE',
+  Agents: 'AGETNS',
+  Help: 'HELP'
 });

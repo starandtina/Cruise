@@ -1,5 +1,5 @@
 define({
-  Logo: '公司LOGO',
+  Logo: 'Cruise',
   Home: '首页',
   Dashboard: '面板',
   VMS: '虚拟机',

@@ -80,6 +80,13 @@ menu, ol, ul {
   padding: 0;
 }
 
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 2px solid #eee;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 30px;
@@ -88,8 +95,8 @@ menu, ol, ul {
 
 #tmpst {
   position: relative;
+  margin: 0 20px;
   min-height: 100%;
-  background: #F9FAF7;
 }
 
 .tmpst-page {
@@ -120,10 +127,10 @@ a.internal-home:hover {
 }
 
 .tmpst-footer .first-label {
-  font-size: 11.9px;
   margin: 10.5px 0;
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 11.9px;
   line-height: 21px;
   text-rendering: optimizelegibility;
 }
@@ -140,7 +147,6 @@ a.internal-home:hover {
 .tmpst-header {
   padding-top: 5px;
   height: 50px;
-  border-bottom: 1px solid #CCC;
 }
 
 .tmpst-header .tmpst-header-primary {
@@ -257,9 +263,67 @@ i {
 
 .validation-error {
   color: red;
+} 
+
+
+.agents-container {
+  border: 2px solid #000;
+  border-top: none;
+}
+
+.agents-container .agents-header {
+  padding: 5px;
+  border-bottom: 2px solid #000;
+  background-color: RGB(77,77,77);
+}
+
+.agents-container .agents-header .label {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.agents-container .agents-header .btn {
+  margin-right: 10px;
+}
+
+.agents-container .agents-list {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.agents-container .agents-list .agent-item {
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.agents-container .agents-list .building {
+  background-color: RGB(193,230,164);
+}
+
+.agents-container .agents-list .idle {
+  background-color: RGB(255,254,167);
+}
+
+.agents-container .agents-list .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #999;
 }
 
 
+.agents-container .agents-sidebar {
+  padding: 15px 30px 30px 15px;
+  border-left: 2px solid #000;
+}
+
+.agents-container .agents-sidebar .table tr td{
+  width: 50%;
+  border-top: none;
+}
 
 .instances-container {
   display: table;

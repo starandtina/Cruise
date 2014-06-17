@@ -1,5 +1,21 @@
-.cell.number-cell= index
-.cell(title= description)= database
-.cell= type
-.cell= password
-.cell= createTime
+.row
+  .col-md-1
+    .circle
+  .col-md-11
+    .agent-content
+      span
+        strong= name
+      span(style="margin: 0 5px;color:gray;") |
+      span= status
+      span(style="margin: 0 5px;color:gray;") |
+      span= ip
+      span(style="margin: 0 5px;color:gray;") |
+      span= filePath
+    div
+      i.fa.fa-plus 
+        u Specify Resources
+      span(style="margin: 0 5px;color:gray;") | 
+      span Resources:
+        each val in resources.split(',')
+          span= val
+            i.fa.fa-times-circle

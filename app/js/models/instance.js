@@ -8,25 +8,30 @@ define([
 
   var Instance = Backbone.Model.extend({
     defaults: {
-      password: null,
-      database: null,
-      createTime: null,
-      type: 'MSSQL 2012',
-      description: 'Basic: Dedicate server, shared VM, 256MB memory, 2560MB storage, 30 connections'
+      name: null,
+      status: null,
+      ip: null,
+      filePath: null,
+      resources: null
     },
     api: Tmpst.api,
     url: '/instances',
     validation: {
-      database: {
+      name: {
         required: true
       },
-      password: {
-        required: true,
-        rangeLength: [8, 32]
+      status: {
+        required: true
       },
-      'password-repeat': {
-        equalTo: 'password'
-      }
+      ip: {
+        required: true
+      },
+      filePath: {
+        required: true
+      },
+      resources: {
+        required: true
+      },
     },
     initialize: function () {
       this.listenTo(this, 'validated', this.handleError);

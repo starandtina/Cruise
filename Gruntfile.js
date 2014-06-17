@@ -400,7 +400,7 @@ module.exports = function (grunt) {
     notify: {
       server: {
         options: {
-          message: 'Servier is Ready!'
+          message: 'Service is Ready!'
         }
       },
       test: {
@@ -524,7 +524,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'connect:livereload',
       'open',
-      'devperf',
+      //'devperf',
       'notify:server',
       'watch'
     ]);

@@ -4,8 +4,31 @@ var yudify = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (index, description, database, type, password, createTime) {
-buf.push("<div class=\"cell number-cell\">" + (jade.escape(null == (jade_interp = index) ? "" : jade_interp)) + "</div><div" + (jade.attr("title", description, true, false)) + " class=\"cell\">" + (jade.escape(null == (jade_interp = database) ? "" : jade_interp)) + "</div><div class=\"cell\">" + (jade.escape(null == (jade_interp = type) ? "" : jade_interp)) + "</div><div class=\"cell\">" + (jade.escape(null == (jade_interp = password) ? "" : jade_interp)) + "</div><div class=\"cell\">" + (jade.escape(null == (jade_interp = createTime) ? "" : jade_interp)) + "</div>");}("index" in locals_for_with?locals_for_with.index:typeof index!=="undefined"?index:undefined,"description" in locals_for_with?locals_for_with.description:typeof description!=="undefined"?description:undefined,"database" in locals_for_with?locals_for_with.database:typeof database!=="undefined"?database:undefined,"type" in locals_for_with?locals_for_with.type:typeof type!=="undefined"?type:undefined,"password" in locals_for_with?locals_for_with.password:typeof password!=="undefined"?password:undefined,"createTime" in locals_for_with?locals_for_with.createTime:typeof createTime!=="undefined"?createTime:undefined));;return buf.join("");
+;var locals_for_with = (locals || {});(function (name, status, ip, filePath, resources) {
+buf.push("<div class=\"row\"><div class=\"col-md-1\"><div class=\"circle\"></div></div><div class=\"col-md-11\"><div class=\"agent-content\"><span><strong>" + (jade.escape(null == (jade_interp = name) ? "" : jade_interp)) + "</strong></span><span style=\"margin: 0 5px;color:gray;\">|</span><span>" + (jade.escape(null == (jade_interp = status) ? "" : jade_interp)) + "</span><span style=\"margin: 0 5px;color:gray;\">|</span><span>" + (jade.escape(null == (jade_interp = ip) ? "" : jade_interp)) + "</span><span style=\"margin: 0 5px;color:gray;\">|</span><span>" + (jade.escape(null == (jade_interp = filePath) ? "" : jade_interp)) + "</span></div><div><i class=\"fa fa-plus\"><u>Specify Resources</u></i><span style=\"margin: 0 5px;color:gray;\">| </span><span>Resources:");
+// iterate resources.split(',')
+;(function(){
+  var $$obj = resources.split(',');
+  if ('number' == typeof $$obj.length) {
+
+    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+      var val = $$obj[$index];
+
+buf.push("<span>" + (jade.escape(null == (jade_interp = val) ? "" : jade_interp)) + "<i class=\"fa fa-times-circle\"></i></span>");
+    }
+
+  } else {
+    var $$l = 0;
+    for (var $index in $$obj) {
+      $$l++;      var val = $$obj[$index];
+
+buf.push("<span>" + (jade.escape(null == (jade_interp = val) ? "" : jade_interp)) + "<i class=\"fa fa-times-circle\"></i></span>");
+    }
+
+  }
+}).call(this);
+
+buf.push("</span></div></div></div>");}("name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined,"status" in locals_for_with?locals_for_with.status:typeof status!=="undefined"?status:undefined,"ip" in locals_for_with?locals_for_with.ip:typeof ip!=="undefined"?ip:undefined,"filePath" in locals_for_with?locals_for_with.filePath:typeof filePath!=="undefined"?filePath:undefined,"resources" in locals_for_with?locals_for_with.resources:typeof resources!=="undefined"?resources:undefined));;return buf.join("");
 }
 return function (locals) {
 if (locals && locals._t) _t = locals._t.merge(_t);

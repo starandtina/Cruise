@@ -23,7 +23,7 @@ define([
   var routes = {};
   var homeUrl = Tmpst.config.dir.home.replace(/^\//, '');
 
-  routes[homeUrl] = routes[homeUrl + 'vms'] = routes[homeUrl + 'gws'] = routes[homeUrl + 'dashboard'] = function (args) {
+  routes[homeUrl] = routes[homeUrl + 'cruise'] = routes[homeUrl + 'help'] = routes[homeUrl + 'dashboard'] = function (args) {
     Tmpst.region.open({
       'pages/home/template/page': {
         regions: {
@@ -40,7 +40,7 @@ define([
     });
   };
 
-  routes[homeUrl + 'services/:section'] = function (section) {
+  routes[homeUrl + 'agents'] = function (section) {
     Tmpst.region.open({
       'pages/home/template/page': {
         regions: {

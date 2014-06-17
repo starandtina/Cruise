@@ -1,6 +1,6 @@
 define({
-  Dashboard: '面板',
-  VMS: '虚拟机',
-  Gateways: '网关',
-  Services: '服务'
+  Dashboard: 'DASHBOARD',
+  Cruise: 'MY CURISE',
+  Agents: 'AGETNS',
+  Help: 'HELP'
 });
