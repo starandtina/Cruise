@@ -6,5 +6,5 @@ define({
   DATABASES: 'DATABASES',
   'Create DB': 'Create DB',
   About: 'About',
-  Logout: 'Logout'
+  Logout: 'Sign out'
 });

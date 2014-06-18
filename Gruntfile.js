@@ -115,7 +115,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: 'http://localhost:<%= connect.options.port %>/agents'
       }
     },
     clean: {
@@ -375,8 +375,6 @@ module.exports = function (grunt) {
           },
           modules: [{
             name: 'pages/home/routes'
-          }, {
-            name: 'pages/about/routes'
           }],
           preserveLicenseComments: false,
           optimizeCss: 'standard',
@@ -501,17 +499,6 @@ module.exports = function (grunt) {
           dest: '<%= appConfig.dist %>'
         }]
       }
-    },
-    devperf: {
-      options: {
-        urls: [
-          'http://localhost:<%= connect.options.port %>'
-        ],
-        numberOfRuns: 5,
-        timeout: 120,
-        openResults: true,
-        resultsFolder: './devperf'
-      }
     }
   });
 
@@ -524,7 +511,6 @@ module.exports = function (grunt) {
       'concurrent:server',
       'connect:livereload',
       'open',
-      //'devperf',
       'notify:server',
       'watch'
     ]);

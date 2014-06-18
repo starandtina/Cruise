@@ -12,10 +12,11 @@
       span(style="margin: 0 5px;color:gray;") |
       span= filePath
     div
-      i.fa.fa-plus 
+      i.fa.fa-plus.add-resource(data-modal=".specify-resources")
         u Specify Resources
       span(style="margin: 0 5px;color:gray;") | 
       span Resources:
-        each val in resources.split(',')
-          span= val
-            i.fa.fa-times-circle
+        if resources
+          for r in resources.split(',')
+            span= r
+              i.fa.fa-times-circle.del-resource(data-resource="#{r}")

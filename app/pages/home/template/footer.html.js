@@ -5,7 +5,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div class=\"container-fluid\"><div class=\"row\">Copyright: Thoughtworks Inc.</div></div>");;return buf.join("");
+buf.push("<div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-12\">Copyright: Thoughtworks Inc.</div></div></div>");;return buf.join("");
 }
 return function (locals) {
 if (locals && locals._t) _t = locals._t.merge(_t);

@@ -83,8 +83,6 @@ define([
     events: function () {
       var events = {};
 
-      events['click ' + this.dom.CREATE_INSTANCE] = 'onCreateInstance';
-
       return events;
     },
     addOne: function (instance) {
@@ -99,19 +97,6 @@ define([
     },
     addAll: function () {
       this.instanceList.each(this.addOne, this);
-    },
-    onCreateInstance: function () {
-      var attrs = {};
-      _.each(this.$(this.dom.INSTANCE_FORM).serializeArray(), function (item) {
-        attrs[item.name] = item.value;
-      });
-
-      attrs.createTime = Util.moment().format();
-
-      this.instanceList.create(attrs, {
-        wait: true,
-        validate: true // make validate method is called before **set**
-      });
     },
     hasUnsavedModel: function () {
       return false;

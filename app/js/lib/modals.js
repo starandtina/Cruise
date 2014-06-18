@@ -400,7 +400,7 @@ or custom styling, which is the approach we take for the lecture viewing modal.
         $view.data("modals-initialized", 1);
       }
 
-      $view.on(options['bind.open'] + ".modal", "[" + options['attribute.open'] + ']', function(e) {
+      $view.on(options['bind.open'], "[" + options['attribute.open'] + ']', function(e) {
         var $anchor = $(this);
         var selector = $anchor.attr(options['attribute.open']);
         var $modal = $view.find(selector);
