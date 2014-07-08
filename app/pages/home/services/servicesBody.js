@@ -16,6 +16,7 @@ define([
     dom: {
       TABS: '[data-js-ui-tabs]',
       CREATE_INSTANCE: '.create-instance',
+      CREATE_AGENT: '.create-agent',
       INSTANCE_CONTAINER: '#agents-list'
     },
     initialize: function () {
@@ -83,7 +84,31 @@ define([
     events: function () {
       var events = {};
 
+      events['click .add-agent'] = this.addAgent;
+
       return events;
+    },
+    addAgent: function () {
+      var $addAgent = $('.add-agent-button');
+      var model = this.model;
+      var me = this;
+      $addAgent.one('click', function (event) {
+        var name = $('.input-agent-host').val();
+        var ip = $('.input-agent-ip').val();
+
+        var defaultInstance = {
+          name: 'hjstdmngbgr05.thoughtworks.com',
+          status: 'building',
+          ip: '192.168.1.5',
+          filePath: '/var/lib/cruise-agent',
+          resources: ''
+        };
+
+        me.instanceList.add(_.extend(defaultInstance, {
+          name: name,
+          ip: ip
+        }));
+      });
     },
     addOne: function (instance) {
       var index = ~~this.instanceList.models.indexOf(instance);

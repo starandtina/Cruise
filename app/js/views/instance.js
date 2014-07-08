@@ -57,7 +57,9 @@ define([
       $addResource.one('click', function (event) {
         var $inputResources = $('.input-resources');
         var resources = model.get('resources').split(',');
-        var inputResources = $inputResources.val().trim().split(',');
+        var inputResources = _.filter($inputResources.val().trim().split(','), function (item) {
+          return item;
+        });;
 
         model.set('resources', resources.concat(inputResources).join(','));
         $inputResources.val('');

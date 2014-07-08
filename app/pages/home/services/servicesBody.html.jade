@@ -8,6 +8,8 @@
       button.btn.btn-default(type="button" disabled="disabled") Virtual
     .row
       #agents-list.agents-list.col-md-8
+        .add-agent-action.clearfix
+          button.btn.btn-primary.add-agent.pull-right(data-modal=".add-agent-modal") Add Agent
       .agents-sidebar.col-md-4
         h4 Summary
         hr
@@ -42,3 +44,17 @@
   .footer
     button.btn.btn-default.specify-resources-add(data-modal-close) Add resources
     button.btn.btn-default.specify-resources-close(data-modal-close) Close
+
+
+.hiding.add-agent-modal.modal(data-modal-overlay-class="tmpst-overlay")
+  .modal-body
+    .add-agent-message
+    p (Add your agent with your host and IP)
+    p
+      input.input-agent-host.col-md-5(type="text" placeholder="specify your host here")
+      input.input-agent-ip.col-md-5(type="text" placeholder="specify your ip here")
+  .footer
+    button.btn.btn-default.add-agent-button(data-modal-close) Add Agent
+    button.btn.btn-default.add-agent-close(data-modal-close) Close
+
+

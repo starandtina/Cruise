@@ -385,3 +385,22 @@ i {
   text-align: center;
 }
 
+
+.add-agent-action {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.add-agent-modal {
+  height: 155px;
+  background-color: RGB(224, 237, 221);
+}
+
+.add-agent-modal .footer {
+  margin: 5px;
+  text-align: left;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
